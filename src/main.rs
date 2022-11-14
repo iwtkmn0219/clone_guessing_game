@@ -1,6 +1,5 @@
 extern crate rand;
 
-use core::num::dec2flt::number::Number;
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
@@ -20,7 +19,7 @@ fn main() {
             .expect("Failed to read line");
 
         let guess: u32 = match guess.trim().parse() {
-            Ok(Number) => Number,
+            Ok(num) => num,
             Err(_) => {
                 println!("Please type a number!");
                 continue;
